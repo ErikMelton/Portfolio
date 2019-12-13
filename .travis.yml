@@ -15,7 +15,7 @@ before_install:
 - cp scripts/gatsby-deploy ~/.ssh/gatsby-deploy
 - chmod 600 ~/.ssh/gatsby-deploy
 - ssh-add ~/.ssh/gatsby-deploy
-- echo -e "Host 51.79.60.183\r\n\tStrictHostKeyChecking no\r\n" >> ~/.ssh/config
+- echo -e "Host 51.79.60.183\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 deploy:
 - provider: script
