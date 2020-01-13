@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
+import ReactGA from 'react-ga'
 import { jsx, Styled } from 'theme-ui'
 import { TemplateProps } from '../../types/gatsby'
 import SEO from '../../components/seo'
@@ -14,7 +15,7 @@ export default function PageTemplate({
   return (
     <React.Fragment>
       <SEO title={title} description={description} uri={uri} />
-
+      
       <div
         sx={{
           alignSelf: 'center',

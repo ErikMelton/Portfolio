@@ -5,7 +5,7 @@ import {
   Main,
   Container
 } from 'theme-ui'
-
+import ReactGA from 'react-ga'
 import Header from './header'
 import Footer from './footer'
 
@@ -14,6 +14,13 @@ interface AppLayoutProps {
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {
+  ReactGA.initialize('UA-154771150-2', {
+    gaOptions: {
+      siteSpeedSampleRate: 100
+    }
+  })
+  ReactGA.pageview(window.location.pathname + window.location.search);  
+
   return (
     <Layout>
       <Container
