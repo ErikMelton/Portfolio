@@ -19,7 +19,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
       siteSpeedSampleRate: 100
     }
   })
-  ReactGA.pageview(window.location.pathname + window.location.search);  
+  ReactGA.pageview('/');  
 
   return (
     <Layout>
