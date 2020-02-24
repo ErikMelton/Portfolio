@@ -20,13 +20,9 @@ const query = graphql`
 
 export default function AppFooter() {
   const data = useStaticQuery(query)
-  const { twitter, github, linkedin, email } = data.site.siteMetadata.social
+  const { github, linkedin, email } = data.site.siteMetadata.social
 
   const links = [
-    {
-      url: `https://twitter.com/${twitter}`,
-      icon: <FaTwitter />
-    },
     {
       url: `https://github.com/${github}`,
       icon: <FaGithub />
